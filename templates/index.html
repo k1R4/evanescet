@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    
+{% endblock %}
+
+{% block body %}
+    <form action="/encrypt" method="get" id="encrypt">
+        <label for="txt">Text to be encrypted:</label><br>
+        <input type="text" id="txt" name="txt"><br>
+        <label for="url">/<i>url</i>:</label><br>
+        <input type="text" id="url" name="url"><br>
+        <label for="pass">Password:</label><br>
+        <input type="password" id="pass" name="pass"><br> 
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
+    
+{% block script %}
+    
+{% endblock %}
