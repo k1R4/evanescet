@@ -5,15 +5,17 @@
 {% endblock %}
 
 {% block body %}
-    <form action="/encrypt" method="get" id="encrypt">
-        <label for="txt">Text to be encrypted:</label><br>
-        <input type="text" id="txt" name="txt"><br>
-        <label for="url">/<i>url</i>:</label><br>
-        <input type="text" id="url" name="url"><br>
-        <label for="pass">Password:</label><br>
-        <input type="password" id="pass" name="pass"><br> 
-        <input type="submit" value="Submit">
-    </form>
+    <div class="form-cont">
+        <p id="error" class="msg">{{ err }}</p>
+        <p id="info" class="msg">{{ inf }}</p><br><br><br>
+        <form action="/encrypt" method="get" id="encrypt"> 
+            <input type="text" name="url" id="url" class="box" placeholder='/<url>'><br><br>
+            <input type="password" name="pass" class="box" id="pass" placeholder='Password'><br><br>
+            <input type="text" name="txt" class="box txt" id="txt" placeholder="Text"><br><br>
+            <input type="submit" class="btn" value="Submit">
+        </form>
+
+   </div>
 {% endblock %}
     
 {% block script %}

@@ -1,12 +1,15 @@
+{% extends 'base.html' %}
+
 {% block head %} 
 {% endblock %}
 
 {% block body %}
-<form action="/decrypt/{{value}}/" method='get' id='decrypt'>
-        <label for="pass">Password:</label><br> 
-        <input type="password" id="pass" name="pass"><br>
-        <input type="submit" value="Submit">
-    </form> 
+    <div class="form-cont">    
+        <form action="/decrypt/{{value}}/" method='get' id='decrypt'>
+            <input type="password" id="pass" name="pass" class="box" placeholder='Password'><br><br>
+            <input type="submit" class="btn" value="Submit">
+        </form>
+    </div>
 {% endblock %}
 
 {% block script %}
