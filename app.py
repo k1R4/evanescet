@@ -1,5 +1,4 @@
 import simplejson as json
-import base64
 from hashlib import sha256
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 app = Flask(__name__)
